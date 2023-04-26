@@ -7,7 +7,7 @@ import Titulo from "./Titulo" //um componente pode usar outro, para isso é prec
 function App() {
   return (
     <div>
-      <Titulo/>
+      <Titulo nome="Poli" cor="pink" paragrafo={true}/>
       <Titulo/>
       <Titulo/>
     </div>
