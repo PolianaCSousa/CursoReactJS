@@ -3,7 +3,7 @@
 //Se eu nao passar nada no props do componente, ele simplesmente ignora
 function Titulo({nome, cor, paragrafo}){
 
-    //para incorporar JavaScript no JSX, deve-se usar chaves. As 3 variaveis que incorporei no componente, foi preciso usar chaves
+    //JSX: para incorporar JavaScript no JSX, deve-se usar chaves. As 3 variaveis que incorporei no componente, foi preciso usar chaves
     //let nome = "Poli";
     const soma = 10 + 10;
     const urlImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png";
