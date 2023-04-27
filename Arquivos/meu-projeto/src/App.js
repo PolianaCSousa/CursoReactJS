@@ -1,26 +1,17 @@
 import './App.css';
-import './components/HelloWorld'
+import './components/HelloWorld';
 import HelloWorld from './components/HelloWorld';
-import Frase from './components/Frase';
+import SayMyName from './components/SayMyName';
+import Pessoa from './Pessoa';
 
 function App() {
 
-  //posso interpolar variáveis no código
-  const name = 'Poliana'
-
-  //posso interpolar funções também
-  function somar(a, b){
-    return(a+b)
-  }
-
   return (
     <div className="App">     
-        <Frase/>
-        <h1>Aprendendo React!</h1>
-        <p>Bem vindo(a) {name}!</p>
-        <p>Somando sem função - Soma: {1+1}</p>
-        <p>Somando com função - Soma: {somar(1,1)}</p>
         <HelloWorld/>
+        <SayMyName nome="Poli" idade="23"/>
+        <SayMyName nome="Lele" idade="24"/>
+        <Pessoa nome="Poliana" idade="23" profissao="Estudante"/>
     </div>
   );
 }

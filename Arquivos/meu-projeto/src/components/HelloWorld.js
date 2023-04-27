@@ -1,7 +1,7 @@
 function HelloWorld() {
     return(
         <div>
-            <h1>Meu primeiro componente</h1>
+            <h1>Hello World!</h1>
         </div>
     )
 }
