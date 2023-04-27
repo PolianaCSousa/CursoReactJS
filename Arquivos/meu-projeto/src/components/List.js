@@ -6,8 +6,9 @@ function List() {
         <>
             <h1>Minha Lista</h1>
             <ul>
-                <Item carro="Fusca"></Item>
-                <Item carro="Uno"></Item>
+                <Item carro="Fusca" ano_lancamento={1998}></Item>
+                <Item carro="Uno" ano_lancamento={2009}></Item>
+                <Item/>
             </ul>
         </>
     )
