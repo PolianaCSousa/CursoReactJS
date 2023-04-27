@@ -1,13 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"; //é preciso importar esses componetes pra fazer o sistema de roteamento.
+//Para criar as rotas usamos os tres componentes acima
 
-import Titulo from "./Titulo"  
-
+import Contato from "./pages/Contato";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
 
 function App() {
   return (
     <div>
-      <Titulo cor="pink"/>
-      <Titulo cor="grey"/>
-      <Titulo/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/sobre" element={<Sobre/>}/>
+          <Route path="/contato" element={<Contato/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
