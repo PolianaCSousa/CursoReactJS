@@ -1,23 +1,25 @@
-//para retornar mais de uma tag, é preciso colocá-las dentro de uma div que deve estar dentro de ()
-//PROPS: Os props ficam dentro de chaves. Eu posso manipular um componente de acordo com o props que ele recebe. Posso usar um if por exemplo e determinar se um props vai ser aplicado ao componente
-//Se eu nao passar nada no props do componente, ele simplesmente ignora
-function Titulo({nome, cor, paragrafo}){
+import { useState } from "react"; //para usar estados em React, eu preciso fazer essa importação
+//sintaxe da criação de um estado: const [nomeDoEstado, funcaoQueAtualizaOEstado] = useState() (o use state recebe a mensagem que inicializa o estado)
 
-    //JSX: para incorporar JavaScript no JSX, deve-se usar chaves. As 3 variaveis que incorporei no componente, foi preciso usar chaves
-    //let nome = "Poli";
-    const soma = 10 + 10;
+function Titulo({cor}){
+
+    const [texto, setTexto] = useState("Título do estado inicial")
+    const [inputText, setInputText] = useState("")
     const urlImg = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png";
+
+    //essa funcao atualiza o estado de nome "texto" que é o estado que está na tag h1. O estado é atualizado com o valor de outro estado (inputText)
+    function clicou(){
+        setTexto(inputText);
+    }
+
+    //na arrow function definida na tag input, defini um parâmetro pra ela. Esse parâmetro é o valor que será digitado no input. A variavel e é padronizada, e ela recebe o valor do eveto em questão.
 
     return (
         <div>
-            <h1 style={{color:cor}}> Oi, eu sou a { nome ? nome : "Fulano" }</h1> 
-            {paragrafo ? 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vero, dicta soluta officiis ab itaque velit hic eum impedit tempore necessitatibus excepturi quaerat praesentium! Molestiae cumque laboriosam nostrum esse veritatis.</p>
-                :
-                <p></p>
-            }
-            <p>O valor da soma é {soma}</p>
+            <h1 style={{color:cor}}> {texto} </h1>
             <img src={urlImg} alt="Logo React" width="100px"/>
+            <input value={inputText} onChange={(e) => {setInputText(e.target.value)}}/>
+            <button onClick={clicou}>Mudar</button>
             
         </div>
     )

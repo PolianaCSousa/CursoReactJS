@@ -1,14 +1,12 @@
-//o nome do componente deve ser o mesmo que o nome do arquivo
-//outra convenção é colocar o nome do componente com a primeira letra maiúscula, para nomes compostos deixamos em CamelCase
 
-import Titulo from "./Titulo" //um componente pode usar outro, para isso é preciso importá-lo
+import Titulo from "./Titulo"  
 
-//para retornar mais de 1 componente, é preciso usar parênteses e colocá-los dentro de uma div
+
 function App() {
   return (
     <div>
-      <Titulo nome="Poli" cor="pink" paragrafo={true}/>
-      <Titulo/>
+      <Titulo cor="pink"/>
+      <Titulo cor="grey"/>
       <Titulo/>
     </div>
   )
